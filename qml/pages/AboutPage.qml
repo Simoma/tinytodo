@@ -44,6 +44,12 @@ Page {
             }
             Label {
                 anchors.horizontalCenter: column.horizontalCenter
+                text: "<a href=\"https://github.com/Simoma/tinytodo\">https://github.com/Simoma/tinytodo</a>"
+                font.pixelSize: Theme.fontSizeExtraSmall
+                onLinkActivated: Qt.openUrlExternally(link)
+            }
+            Label {
+                anchors.horizontalCenter: column.horizontalCenter
                 text: "simo.h.mattila@gmail.com"
                 font.pixelSize: Theme.fontSizeExtraSmall
             }
