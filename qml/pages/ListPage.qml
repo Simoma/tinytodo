@@ -42,6 +42,11 @@ Page {
         signalRelay.coverAdd.connect(showAddDialog);
     }
 
+    RemorsePopup {
+        id: deleteRemorse
+        onTriggered: todoModel.clearDoneTodo();
+    }
+
     Component {
         id: todoDelegate
         TextSwitch {
@@ -72,8 +77,8 @@ Page {
             MenuItem {
                 text: qsTr("Remove done items")
                 onClicked: {
-                    console.log("List: Delete done todos")
-                    todoModel.clearDoneTodo();
+                    console.log("List: Delete done items")
+                    deleteRemorse.execute(qsTr("Deleting done items"));
                 }
             }
             MenuItem {
