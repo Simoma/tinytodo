@@ -24,6 +24,10 @@ OTHER_FILES += qml/harbour-tinytodo.qml \
 
 TRANSLATIONS = harbour-tinytodo_fi.ts
 
+trans.files = harbour-tinytodo_fi.qm
+trans.path = /usr/share/harbour-tinytodo
+INSTALLS += trans
+
 lupdate_only{
 SOURCES += qml/*.qml \
     qml/cover/*.qml \
