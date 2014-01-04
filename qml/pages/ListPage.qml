@@ -77,8 +77,7 @@ Page {
             MenuItem {
                 text: qsTr("Remove done items")
                 onClicked: {
-                    console.log("List: Delete done items")
-                    deleteRemorse.execute(qsTr("Deleting done items"));
+                    deleteRemorse.execute(qsTr("Removing done items"));
                 }
             }
             MenuItem {
