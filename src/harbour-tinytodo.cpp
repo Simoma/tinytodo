@@ -22,11 +22,22 @@
 #include <QtQuick>
 #endif
 
+#include <QTranslator>
 #include <sailfishapp.h>
 
 
 int main(int argc, char *argv[])
 {
-    return SailfishApp::main(argc, argv);
-}
+    QGuiApplication *app = SailfishApp::application(argc, argv);
 
+    QTranslator translator;
+    translator.load("harbour-tinytodo_" + QLocale::system().name(),
+                    QLibraryInfo::location(QLibraryInfo::TranslationsPath));
+    app->installTranslator(&translator);
+
+    QQuickView *view = SailfishApp::createView();
+    view->setSource(SailfishApp::pathTo("qml/harbour-tinytodo.qml"));
+    view->showFullScreen();
+
+    return app->exec();
+}
