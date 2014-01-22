@@ -40,7 +40,7 @@ Page {
             }
             Label {
                 anchors.horizontalCenter: column.horizontalCenter
-                text: "Copyright 2013 Simo Mattila"
+                text: "Copyright 2013-2014 Simo Mattila"
             }
             Label {
                 anchors.horizontalCenter: column.horizontalCenter
