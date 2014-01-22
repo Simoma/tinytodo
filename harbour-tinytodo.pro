@@ -24,7 +24,7 @@ OTHER_FILES += qml/harbour-tinytodo.qml \
 
 TRANSLATIONS = harbour-tinytodo_fi.ts
 
-trans.files = harbour-tinytodo_fi.qm
+trans.files = locale/harbour-tinytodo_fi.qm
 trans.path = /usr/share/harbour-tinytodo/locale
 INSTALLS += trans
 
