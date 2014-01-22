@@ -31,8 +31,12 @@ int main(int argc, char *argv[])
     QGuiApplication *app = SailfishApp::application(argc, argv);
 
     QTranslator translator;
-    translator.load("harbour-tinytodo_" + QLocale::system().name(),
-                    QLibraryInfo::location(QLibraryInfo::TranslationsPath));
+    //QString translationLocation = QLibraryInfo::location(QLibraryInfo::TranslationsPath);
+    QString translationLocation = "/usr/share/harbour-tinytodo/locale";
+    QString translation = "harbour-tinytodo_" + QLocale::system().name();
+    qDebug()<<"Translation location: "<<translationLocation;
+    qDebug()<<"Translation: "<<translation;
+    translator.load(translation, translationLocation);
     app->installTranslator(&translator);
 
     QQuickView *view = SailfishApp::createView();
