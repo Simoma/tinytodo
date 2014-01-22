@@ -11,7 +11,7 @@
     <message>
         <location filename="qml/pages/AboutPage.qml" line="59"/>
         <source>Distributed under the terms of the&lt;br&gt;GNU General Public License</source>
-        <translation>Jakelu GNU General Public License&lt;br&gt;mukaisesti</translation>
+        <translation>Jakelu GNU General Public License mukaisesti</translation>
     </message>
 </context>
 <context>
@@ -50,7 +50,7 @@
     <message>
         <location filename="qml/pages/ListPage.qml" line="78"/>
         <source>Remove done items</source>
-        <translation>Poista valmiit</translation>
+        <translation>Poista valmiit tehtävät</translation>
     </message>
     <message>
         <location filename="qml/pages/ListPage.qml" line="80"/>
@@ -60,7 +60,7 @@
     <message>
         <location filename="qml/pages/ListPage.qml" line="84"/>
         <source>Add new item</source>
-        <translation>Lisää uusi</translation>
+        <translation>Lisää uusi tehtävä</translation>
     </message>
     <message>
         <location filename="qml/pages/ListPage.qml" line="93"/>
