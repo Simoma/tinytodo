@@ -23,6 +23,10 @@
 #endif
 
 #include <QTranslator>
+#include <QLocale>
+#include <QDebug>
+#include <QGuiApplication>
+#include <QQuickView>
 #include <sailfishapp.h>
 
 
