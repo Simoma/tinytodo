@@ -22,7 +22,7 @@ OTHER_FILES += qml/harbour-tinytodo.qml \
     qml/pages/AddPage.qml \
     qml/pages/AboutPage.qml
 
-TRANSLATIONS = harbour-tinytodo_fi.ts
+TRANSLATIONS = locale/harbour-tinytodo_fi.ts
 
 trans.files = locale/harbour-tinytodo_fi.qm
 trans.path = /usr/share/harbour-tinytodo/locale
