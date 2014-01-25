@@ -40,6 +40,11 @@ Page {
             }
             Label {
                 anchors.horizontalCenter: column.horizontalCenter
+                text: qsTr("Version") + " 0.3"
+                font.pixelSize: Theme.fontSizeExtraSmall
+            }
+            Label {
+                anchors.horizontalCenter: column.horizontalCenter
                 text: "Copyright 2013-2014 Simo Mattila"
             }
             Label {

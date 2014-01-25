@@ -9,7 +9,12 @@
         <translation>Tietoja</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="59"/>
+        <location filename="../qml/pages/AboutPage.qml" line="43"/>
+        <source>Version</source>
+        <translation>Versio</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="64"/>
         <source>Distributed under the terms of the&lt;br&gt;GNU General Public License</source>
         <translation>Jakelu GNU General Public License mukaisesti</translation>
     </message>
@@ -30,7 +35,7 @@
 <context>
     <name>CoverPage</name>
     <message>
-        <location filename="../qml/cover/CoverPage.qml" line="47"/>
+        <location filename="../qml/cover/CoverPage.qml" line="48"/>
         <source>&lt;b&gt;%1&lt;/b&gt; items</source>
         <translation>&lt;b&gt;%1&lt;/b&gt; tehtävää</translation>
     </message>
