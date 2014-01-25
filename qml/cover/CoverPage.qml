@@ -22,6 +22,7 @@ import QtQuick 2.0
 import Sailfish.Silica 1.0
 
 CoverBackground {
+    id: cover
     Label {
         id: label
         anchors.centerIn: parent
@@ -39,18 +40,32 @@ CoverBackground {
     }
 
     Column {
-        anchors.centerIn: parent
+        anchors.fill: cover
         anchors.margins: Theme.paddingLarge
         Label {
             id: todoLabel
-            text: qsTr("<b>%1</b> to do").arg(todoModel.nTodo)
+            width: cover.width - 2 * Theme.paddingLarge
+            text: qsTr("<b>%1</b> items").arg(todoModel.nTodo)
             font.pixelSize: Theme.fontSizeLarge
+            truncationMode: TruncationMode.Fade
         }
-        Label {
-            id: doneLabel
-            text: qsTr("<b>%1</b> done").arg(todoModel.nDone)
-            color: Theme.secondaryColor
-            font.pixelSize: Theme.fontSizeLarge
+        ListView {
+            id: coverListView
+            anchors.top: todoLabel.bottom
+            anchors.topMargin: Theme.paddingMedium
+            anchors.left: parent.left
+            anchors.right: parent.right
+            height: 4 * (Theme.fontSizeMedium + 2 * Theme.paddingSmall)
+            clip: true
+            model: todoModel
+            delegate:
+                Label {
+                    text: name
+                    visible: !done
+                    height: done ? 0 : Theme.fontSizeMedium + 2 * Theme.paddingSmall
+                    width: cover.width - 2 * Theme.paddingLarge
+                    truncationMode: TruncationMode.Fade
+                }
         }
     }
 
