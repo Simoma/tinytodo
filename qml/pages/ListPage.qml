@@ -51,6 +51,7 @@ Page {
         id: todoDelegate
         TextSwitch {
             x: Theme.paddingLarge
+            width: todoView.width - Theme.paddingLarge
             text: name
             checked: done
             //color: checked ? Theme.secondaryColor : Theme.primaryColor
