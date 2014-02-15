@@ -70,6 +70,8 @@ Page {
         delegate: todoDelegate
         anchors.fill: parent
 
+        VerticalScrollDecorator {}
+
         PullDownMenu {
             MenuItem {
                 text: qsTr("About Tiny Todo")
