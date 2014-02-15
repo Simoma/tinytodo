@@ -38,6 +38,7 @@ Dialog {
             width: parent.width - Theme.paddingLarge
             focus: true
             placeholderText: qsTr("New item title")
+            label: qsTr("Item title")
             text: ""
             Keys.onEnterPressed: {
                 console.log("Add: Enter pressed")
