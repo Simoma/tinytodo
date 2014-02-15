@@ -40,14 +40,9 @@ Dialog {
             placeholderText: qsTr("New item title")
             label: qsTr("Item title")
             text: ""
-            Keys.onEnterPressed: {
-                console.log("Add: Enter pressed")
-                accept();
-            }
-            Keys.onReturnPressed: {
-                console.log("Add: Return pressed")
-                accept();
-            }
+            EnterKey.enabled: text.length > 0
+            EnterKey.iconSource: "image://theme/icon-m-enter-accept"
+            EnterKey.onClicked: accept()
         }
     }
 
