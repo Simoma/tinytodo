@@ -1,6 +1,6 @@
 Name: harbour-tinytodo
 Summary: Tiny Todo - A simple todo list
-Version: 0.3
+Version: 0.3.1
 Release: 1
 Group: Qt/Qt
 License: GPL
@@ -11,21 +11,21 @@ Description: |-
 Configure: none
 Builder: qtc5
 PkgConfigBR:
-- sailfishapp
-- Qt5Quick
-- Qt5Qml
 - Qt5Core
+- Qt5Qml
+- Qt5Quick
+- sailfishapp
 Requires:
 - sailfishsilica-qt5
 Files:
-- /usr/share/icons/hicolor/86x86/apps
-- '%{_bindir}'
-- '%{_datadir}/%{name}/qml'
-- '%{_datadir}/applications/%{name}.desktop'
-- '%{_datadir}/icons/hicolor/86x86/apps/%{name}.png'
-- /usr/bin
-- /usr/share/harbour-tinytodo
-- /usr/share/applications
-- /usr/share/icons/hicolor/86x86/apps
 - /usr/share/harbour-tinytodo/locale
+- /usr/share/icons/hicolor/86x86/apps
+- /usr/share/applications
+- /usr/share/harbour-tinytodo
+- /usr/bin
+- '%{_datadir}/icons/hicolor/86x86/apps/%{name}.png'
+- '%{_datadir}/applications/%{name}.desktop'
+- '%{_datadir}/%{name}/qml'
+- '%{_bindir}'
+- /usr/share/icons/hicolor/86x86/apps
 PkgBR: []
