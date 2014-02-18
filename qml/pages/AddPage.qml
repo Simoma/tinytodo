@@ -29,6 +29,7 @@ Dialog {
     Column {
         anchors.fill: parent
         DialogHeader {
+            title: qsTr("Add new item")
             acceptText: qsTr("Add")
         }
 
