@@ -1,0 +1,20 @@
+Tiny Todo changelog
+
+Version 0.4 - 19.02.2014
+ - Fixed common Sailfish UI pitfalls
+ - New looks for todo list, note that glass ball logic has been inverted
+ - Remove individual items from the list
+
+ 
+Version 0.3 - 25.01.2014
+ - Show four first undone items on the cover
+ - Translation support
+ - Finnish translation
+ 
+ 
+Version 0.2
+ - Fixed losing sync of item statuses between database and list view with long lists
+
+ 
+Version 0.1
+ - Initial release
