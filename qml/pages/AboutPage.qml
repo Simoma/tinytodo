@@ -40,7 +40,7 @@ Page {
             }
             Label {
                 anchors.horizontalCenter: column.horizontalCenter
-                text: qsTr("Version") + " 0.3.1 (dev)"
+                text: qsTr("Version") + " 0.4"
                 font.pixelSize: Theme.fontSizeExtraSmall
             }
             Label {
