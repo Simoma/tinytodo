@@ -47,27 +47,57 @@ Page {
         onTriggered: todoModel.clearDoneTodo();
     }
 
-    Component {
-        id: todoDelegate
-        TextSwitch {
-            x: Theme.paddingLarge
-            width: todoView.width - Theme.paddingLarge
-            text: name
-            checked: done
-            //color: checked ? Theme.secondaryColor : Theme.primaryColor
-            onCheckedChanged: {
-                if(text) {
-                    console.log("List: (" + index + ")\"" + text + (checked ? "\" marked done":"\" marked not done"));
-                    todoModel.updateStatus(index, text, checked);
-                }
-            }
-        }
-    }
-
     SilicaListView {
         id: todoView
         model: todoModel
-        delegate: todoDelegate
+        delegate: ListItem {
+            id: delegateItem
+            width: parent.width
+            menu: contextMenu
+            onClicked: todoModel.updateStatus(index, name, !done)
+            ListView.onRemove: animateRemoval()
+            function deleteItem() {
+                console.log("Deleting (" + index +") " + name)
+                todoModel.deleteTodo(index, name);
+            }
+            GlassItem {
+                id: delegateIndicator
+                x: Theme.paddingLarge
+                anchors.verticalCenter: parent.verticalCenter
+                opacity: 1.0
+                dimmed: done
+                falloffRadius: 0.075
+                Behavior on falloffRadius {
+                    NumberAnimation { duration: 50; easing.type: Easing.InOutQuad }
+                }
+                brightness: 1.0
+                Behavior on brightness {
+                    NumberAnimation { duration: 50; easing.type: Easing.InOutQuad }
+                }
+                color: highlighted ? Theme.highlightColor : Theme.primaryColor
+            }
+            Label {
+                id: delegateLabel
+                anchors.left: delegateIndicator.right
+                anchors.verticalCenter: parent.verticalCenter
+                anchors.right: parent.right
+                anchors.rightMargin: Theme.paddingLarge
+                //width: todoView.width - delegateIndicator.width - 2*Theme.paddingLarge
+                text: name
+                color: highlighted ? Theme.highlightColor : (done ? Theme.secondaryColor : Theme.primaryColor)
+                font.strikeout: done
+                truncationMode: TruncationMode.Fade
+            }
+            Component {
+                id: contextMenu
+                ContextMenu {
+                    MenuItem {
+                        text: qsTr("Remove")
+                        onClicked: remorseAction(qsTr("Removing"), delegateItem.deleteItem )
+                    }
+                }
+            }
+        }
         anchors.fill: parent
 
         VerticalScrollDecorator {}

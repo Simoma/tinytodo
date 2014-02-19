@@ -106,6 +106,17 @@ ListModel {
           )
      }
 
+     function deleteTodo(index, name) {
+         __db().transaction(
+             function(tx) {
+                 tx.executeSql("DELETE FROM todo WHERE name=?", [name]);
+                 model.remove(index);
+                 updateNumberOfTodos();
+                 updateNumberOfDone();
+             }
+         )
+     }
+
      function clearDoneTodo() {
          __db().transaction(
              function(tx) {
