@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="fi_FI">
+<TS version="2.1" language="fi_FI">
 <context>
     <name>AboutPage</name>
     <message>
@@ -10,8 +10,12 @@
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="43"/>
+        <source>Version </source>
+        <translation>Versio </translation>
+    </message>
+    <message>
         <source>Version</source>
-        <translation>Versio</translation>
+        <translation type="vanished">Versio</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="64"/>
@@ -22,24 +26,28 @@
 <context>
     <name>AddPage</name>
     <message>
-        <location filename="../qml/pages/AddPage.qml" line="32"/>
         <source>Add new item</source>
-        <translation>Lisää uusi tehtävä</translation>
+        <translation type="vanished">Lisää uusi tehtävä</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddPage.qml" line="33"/>
+        <source>Edit item</source>
+        <translation type="vanished">Muokkaa tehtävää</translation>
+    </message>
+    <message>
         <source>Add</source>
-        <translation>Lisää</translation>
+        <translation type="vanished">Lisää</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddPage.qml" line="41"/>
+        <source>Save</source>
+        <translation type="vanished">Tallenna</translation>
+    </message>
+    <message>
         <source>New item title</source>
-        <translation>Uuden tehtävän nimi</translation>
+        <translation type="vanished">Uuden tehtävän nimi</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddPage.qml" line="42"/>
         <source>Item title</source>
-        <translation>Tehtävän nimi</translation>
+        <translation type="vanished">Tehtävän nimi</translation>
     </message>
 </context>
 <context>
@@ -51,39 +59,78 @@
     </message>
 </context>
 <context>
-    <name>ListPage</name>
+    <name>EditPage</name>
     <message>
-        <location filename="../qml/pages/ListPage.qml" line="95"/>
-        <source>Remove</source>
-        <translation>Poista</translation>
+        <location filename="../qml/pages/EditPage.qml" line="33"/>
+        <source>Edit item</source>
+        <translation>Muokkaa tehtävää</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ListPage.qml" line="96"/>
-        <source>Removing</source>
-        <translation>Poistetaan</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/ListPage.qml" line="107"/>
-        <source>About Tiny Todo</source>
-        <translation>Tietoja Tiny Todosta</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/ListPage.qml" line="111"/>
-        <source>Remove done items</source>
-        <translation>Poista valmiit tehtävät</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/ListPage.qml" line="113"/>
-        <source>Removing done items</source>
-        <translation>Poistetaan valmiit</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/ListPage.qml" line="117"/>
+        <location filename="../qml/pages/EditPage.qml" line="33"/>
         <source>Add new item</source>
         <translation>Lisää uusi tehtävä</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ListPage.qml" line="126"/>
+        <location filename="../qml/pages/EditPage.qml" line="34"/>
+        <source>Save</source>
+        <translation>Tallenna</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/EditPage.qml" line="34"/>
+        <source>Add</source>
+        <translation>Lisää</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/EditPage.qml" line="42"/>
+        <location filename="../qml/pages/EditPage.qml" line="43"/>
+        <source>Item title</source>
+        <translation>Tehtävän nimi</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/EditPage.qml" line="42"/>
+        <source>New item title</source>
+        <translation>Uuden tehtävän nimi</translation>
+    </message>
+</context>
+<context>
+    <name>ListPage</name>
+    <message>
+        <location filename="../qml/pages/ListPage.qml" line="107"/>
+        <source>Edit</source>
+        <translation>Muokkaa</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ListPage.qml" line="111"/>
+        <source>Remove</source>
+        <translation>Poista</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ListPage.qml" line="112"/>
+        <source>Removing</source>
+        <translation>Poistetaan</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ListPage.qml" line="123"/>
+        <source>About Tiny Todo</source>
+        <translation>Tietoja Tiny Todosta</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ListPage.qml" line="127"/>
+        <source>Remove done items</source>
+        <translation>Poista valmiit tehtävät</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ListPage.qml" line="129"/>
+        <source>Removing done items</source>
+        <translation>Poistetaan valmiit</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ListPage.qml" line="133"/>
+        <source>Add new item</source>
+        <translation>Lisää uusi tehtävä</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ListPage.qml" line="142"/>
         <source>No items</source>
         <translation>Ei tehtäviä</translation>
     </message>
