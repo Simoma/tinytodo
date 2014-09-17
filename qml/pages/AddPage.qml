@@ -48,7 +48,7 @@ Dialog {
     }
 
     onDone: {
-        if(result == DialogResult.Accepted) {
+        if(result === DialogResult.Accepted) {
             itemTitle = input.text
         }
     }
