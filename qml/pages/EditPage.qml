@@ -22,15 +22,16 @@ import QtQuick 2.0
 import Sailfish.Silica 1.0
 
 Dialog {
-    id: addDialog
+    id: editDialog
     allowedOrientations: Orientation.Portrait
+    property string oldTitle
     property string itemTitle
 
     Column {
         anchors.fill: parent
         DialogHeader {
-            title: qsTr("Add new item")
-            acceptText: qsTr("Add")
+            title: oldTitle ? qsTr("Edit item") : qsTr("Add new item")
+            acceptText: oldTitle ? qsTr("Save") : qsTr("Add")
         }
 
         TextField {
@@ -38,9 +39,9 @@ Dialog {
             x: Theme.paddingLarge
             width: parent.width - Theme.paddingLarge
             focus: true
-            placeholderText: qsTr("New item title")
+            placeholderText: oldTitle ? qsTr("Item title") : qsTr("New item title")
             label: qsTr("Item title")
-            text: ""
+            text: oldTitle ? oldTitle : ""
             EnterKey.enabled: text.length > 0
             EnterKey.iconSource: "image://theme/icon-m-enter-accept"
             EnterKey.onClicked: accept()

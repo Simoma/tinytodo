@@ -85,6 +85,18 @@ ListModel {
          )
      }
 
+     function renameTodo(oldName, newName) {
+         __db().transaction(
+             function(tx) {
+                 __ensureTables(tx);
+                 tx.executeSql("UPDATE todo set name=? where name=?", [newName, oldName]);
+                 fillModel();
+                 updateNumberOfTodos();
+                 updateNumberOfDone();
+             }
+         )
+     }
+
      function updateStatus(index, name, done) {
          __db().transaction(
                      function(tx) {

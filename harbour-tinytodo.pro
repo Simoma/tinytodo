@@ -27,8 +27,8 @@ OTHER_FILES += qml/harbour-tinytodo.qml \
     harbour-tinytodo.desktop \
     qml/TodoModel.qml \
     qml/pages/ListPage.qml \
-    qml/pages/AddPage.qml \
-    qml/pages/AboutPage.qml
+    qml/pages/AboutPage.qml \
+    qml/pages/EditPage.qml
 
 TRANSLATIONS = locale/harbour-tinytodo_fi.ts
 

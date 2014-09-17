@@ -26,20 +26,32 @@ Page {
     id: page
     allowedOrientations: Orientation.Portrait
 
-    function showAddDialog () {
-        var dialog = pageStack.push(Qt.resolvedUrl("AddPage.qml"))
+    function showEditDialog (oldTitle) {
+        var dialog = pageStack.push(Qt.resolvedUrl("EditPage.qml"),
+                                    {oldTitle: oldTitle});
         dialog.accepted.connect(function() {
-            if(dialog.itemTitle) {
-                console.log("List: new item")
-                todoModel.addTodo(dialog.itemTitle)
-            } else {
-                console.log("List: new item empty")
+            if(dialog.oldTitle) {
+                if(dialog.itemTitle) {
+                    console.log("Rename: renaming");
+                    todoModel.renameTodo(dialog.oldTitle,dialog.itemTitle)
+                    return;
+                } else {
+                    console.log("Rename: new item empty");
+                    return;
+                }
             }
-        })
+
+            if(dialog.itemTitle) {
+                console.log("Add: new item");
+                todoModel.addTodo(dialog.itemTitle);
+            } else {
+                console.log("Add: new item empty");
+            }
+        });
     }
 
     Component.onCompleted: {
-        signalRelay.coverAdd.connect(showAddDialog);
+        signalRelay.coverAdd.connect(showEditDialog);
     }
 
     RemorsePopup {
@@ -92,6 +104,10 @@ Page {
                 id: contextMenu
                 ContextMenu {
                     MenuItem {
+                        text: qsTr("Edit")
+                        onClicked: showEditDialog(name)
+                    }
+                    MenuItem {
                         text: qsTr("Remove")
                         onClicked: remorseAction(qsTr("Removing"), delegateItem.deleteItem )
                     }
@@ -116,7 +132,7 @@ Page {
             MenuItem {
                 text: qsTr("Add new item")
                 onClicked: {
-                    showAddDialog();
+                    showEditDialog();
                 }
             }
         }
@@ -131,8 +147,3 @@ Page {
         }
     }
 }
-
-
-
-
-
