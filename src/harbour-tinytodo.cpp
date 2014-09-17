@@ -22,6 +22,7 @@
 #include <QtQuick>
 #endif
 
+#include <QtQml>
 #include <QTranslator>
 #include <QLocale>
 #include <QDebug>
