@@ -34,6 +34,10 @@ int main(int argc, char *argv[])
 {
     QGuiApplication *app = SailfishApp::application(argc, argv);
 
+    app->setApplicationName("harbour-tinytodo");
+    app->setApplicationVersion(QString(APP_VERSION)+QString(APP_VERSION_SUFFIX));
+    qDebug()<<app->applicationName()<<" version "<<app->applicationVersion();
+
     QTranslator translator;
     //QString translationLocation = QLibraryInfo::location(QLibraryInfo::TranslationsPath);
     QString translationLocation = "/usr/share/harbour-tinytodo/locale";
@@ -44,6 +48,7 @@ int main(int argc, char *argv[])
     app->installTranslator(&translator);
 
     QQuickView *view = SailfishApp::createView();
+    view->rootContext()->setContextProperty("appVersion", app->applicationVersion());
     view->setSource(SailfishApp::pathTo("qml/harbour-tinytodo.qml"));
     view->showFullScreen();
 
